@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router } from "@reach/router";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Index from "./screens/index";
+import AboutMe from "./screens/aboutme";
+import Experience from "./screens/experience";
+import Contact from "./screens/contact";
+import Projects from "./screens/projects";
+
+const App = () => (
+	<Router>
+		<Index path="/" />
+		<AboutMe path="/aboutme" />
+		<Experience path="/experience" />
+		<Projects path="/projects" />
+		<Contact path="/contact" />
+	</Router>
+);
 
 export default App;
